@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+  <title>
+    Append String
+  </title>
+</head>
+
+<body>
+
+  Enter any Fruits Name : <input type="text" id="userinput" />
+  <input type="button" onclick="addStr()" value="Add" /><br><br>
+  <label for="List" id="lst"></label><br>
+  <div id="strr"></div><br>
+  <label for="List" id="lst2"></label><br>
+  <div id="strr2"></div>
+
+  <script>
+
+    var myarr = ["Apple", "Mango", "Banana"];
+
+    function addStr() {
+      var myarr1 = document.getElementById("userinput").value;
+      myarr.push(myarr1);
+
+      document.getElementById("lst").innerHTML = "List of All fruits Name: ";
+      document.getElementById("strr").innerHTML = myarr;
+
+      myarr.sort();
+      document.getElementById("lst2").innerHTML = "List of All fruits Name after sorting: ";
+      document.getElementById("strr2").innerHTML = myarr;
+      document.getElementById("userinput").value = "";
+    }
+
+  </script>
+</body>
+
+</html>
